@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Leonardo Jonatan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 118, "left": 348, "rotate": 90, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 73.2, "left": 359, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led2", "top": 102, "left": 407, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led3", "top": 44.4, "left": 301.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 242.4,
+      "left": 510.6,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GP11", "led2:A", "green", [ "v0" ] ],
+    [ "pico:GP12", "led1:A", "green", [ "v0" ] ],
+    [ "pico:GP13", "led3:A", "green", [ "v0" ] ],
+    [ "pico:GND.3", "led2:C", "black", [ "v0" ] ],
+    [ "pico:GND.4", "led1:C", "black", [ "v0" ] ],
+    [ "pico:GND.5", "led3:C", "black", [ "v0" ] ],
+    [ "pico:GP21", "bz1:2", "green", [ "v0" ] ],
+    [ "pico:GND.6", "bz1:1", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
