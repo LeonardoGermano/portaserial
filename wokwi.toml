@@ -1,6 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/TecladoMatricial.uf2'
-elf = 'build/TecladoMatricial.elf'
-
-
+firmware = 'build/portaserial.uf2'
+elf = 'build/portaserial.elf'
